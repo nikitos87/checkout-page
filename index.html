@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Checkout Page</title>
+  </head>
+  <body>
+    <main class="layout">
+      <!-- 1. Header -->
+      <header class="header">
+        <!-- Logo -->
+        <figure class="header__logo">
+          <img src="./images/logo.svg" alt="Logo" />
+        </figure>
+
+        <!-- Menu -->
+
+        <div class="header__wrapper">
+          <nav class="header__nav">
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--item__link">Home</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--item__link">Shop</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--item__link">Contact</a>
+            </li>
+            <li class="header__nav--item">
+              <a href="#" class="header__nav--item__link">Help</a>
+            </li>
+          </nav>
+
+          <!-- Account -->
+          <ul class="header__login">
+            <li class="header__login--item">
+              <a href="#" class="header__login--item__text">Account</a>
+              <i class="header__login--item__icon">
+                <img
+                  class="icon__image"
+                  src="./images/arrow_down.svg"
+                  alt="Arrow Down"
+                />
+              </i>
+            </li>
+
+            <li class="header__login--item">
+              <i class="header__login--item__icon">
+                <img
+                  class="icon__image"
+                  src="./images/shopping_basket.svg"
+                  alt="Shopping Basket"
+                />
+              </i>
+              <a href="#" class="header__login--item__text">3 items</a>
+            </li>
+
+            <li class="header__login--item header__login--item--avatar">
+              <img src="./images/photo_resized.jpg" alt="Avatar" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="hamburger">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </div>
+      </header>
+
+      <section class="checkout">
+        <!-- Shipping details -->
+        <div class="checkout__shipping">
+          <div class="checkout__shipping--process">
+            <span>Account</span>
+
+            <figure>
+              <img src="./images/tick-mark.svg" alt="ok" />
+            </figure>
+            <span>Shipping</span>
+
+            <figure>
+              <img src="./images/tick-mark.svg" alt="ok" />
+            </figure>
+
+            <span>Payment</span>
+          </div>
+          <h2 class="checkout__shipping--title title">Shipping details</h2>
+          <form class="checkout__shipping--form">
+            <fieldset>
+              <label for="saved-address">Use saved address</label>
+
+              <div class="checkout__shipping--form__select-wrapper">
+                <select name="saved-address" id="saved-address">
+                  <option value="123, Electric avenue">
+                    123, Electric avenue
+                  </option>
+                  <option value="124, Harbour Street">
+                    124, Electric avenue
+                  </option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <label for="house">First line of address</label>
+              <div>
+                <input name="house" id="house" type="text" placeholder="123" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <label for="street">Street name</label>
+              <div>
+                <input
+                  name="street"
+                  id="street"
+                  type="text"
+                  placeholder="Electric avenue"
+                />
+              </div>
+            </fieldset>
+
+            <div>
+              <fieldset>
+                <label for="postcode">Postcode</label>
+                <input
+                  type="text"
+                  name="postcode"
+                  id="postcode"
+                  placeholder="ABC - 123"
+                />
+              </fieldset>
+
+              <fieldset>
+                <label for="shipping-options">Select shipping</label>
+                <div class="select-wrapper">
+                  <select name="shipping-options" id="shipping-options">
+                    <option value="Free delivery">Free delivery</option>
+                    <option value="Fast delivery">Fast delivery</option>
+                    <option value="Immediate delivery">
+                      Immediate delivery
+                    </option>
+                  </select>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+          <div class="checkout__shipping--btns">
+            <div class="checkout__shipping--btns__cancel">
+              <a href="#">Cancel order</a>
+            </div>
+            <div class="checkout__shipping--btns__payment">
+              <a href="#">Payment</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order summary -->
+        <div class="checkout__summary">
+          <h2 class="checkout__summary--title title">Order Summary</h2>
+          <figure class="checkout__summary--img">
+            <img src="./images/headphones.jpeg" alt="headphones" />
+          </figure>
+
+          <div class="checkout__summary--product">
+            <div class="checkout__summary--product__descr">
+              <h3 class="checkout__summary--product__descr--name">
+                Sony wireless headphones
+              </h3>
+              <span class="checkout__summary--product__descr--price"
+                >&#163;320.45</span
+              >
+            </div>
+
+            <div class="checkout__summary--product__quantity">
+              <button class="checkout__summary--product__quantity--button">
+                -
+              </button>
+              <div class="checkout__summary--product__quantity--count">1</div>
+              <button class="checkout__summary--product__quantity--button">
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="checkout__summary--discount">
+            <h4 class="checkout__summary--discount--title">
+              Gift Card / Discount code
+            </h4>
+            <form class="checkout__summary--discount--coupon">
+              <input
+                type="text"
+                class="checkout__summary--discount--coupon__input"
+              />
+              <input
+                type="submit"
+                value="Apply"
+                class="checkout__summary--discount--coupon__submit"
+              />
+            </form>
+          </div>
+
+          <div class="checkout__summary--totals">
+            <div>
+              <h3>Sub total</h3>
+              <span>&#163;316.55</span>
+            </div>
+            <div>
+              <h3>Tax</h3>
+              <span>&#163;3.45</span>
+            </div>
+            <div>
+              <h3>Shipping</h3>
+              <span>Free</span>
+            </div>
+            <div>
+              <h3>Total</h3>
+              <span>&#163;320.45</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
